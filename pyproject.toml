@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sawah"
+version = "0.1.0"
+description = "Rice season planning from daily weather: growth stages, crop water use, water stress and a water-limited yield estimate."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { file = "LICENSE" }
+authors = [{ name = "augustusdexterous" }]
+keywords = ["rice", "agriculture", "evapotranspiration", "crop water", "agrotech", "growing degree days"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7", "ruff>=0.5", "numpy>=1.22"]
+
+[project.scripts]
+sawah = "sawah.cli:main"
+
+[tool.setuptools]
+packages = ["sawah"]
+
+[tool.setuptools.package-data]
+sawah = ["py.typed"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["tests", "."]
+
+[tool.ruff]
+line-length = 110

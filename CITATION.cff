@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "If you use sawah, please cite it as below and cite the methods it implements."
+title: "sawah: rice season planning from daily weather"
+version: 0.1.0
+license: MIT
+authors:
+  - name: "augustusdexterous"
+repository-code: "https://github.com/augustusdexterous/sawah"
+abstract: "Growth stages, crop water use, water stress and a water-limited yield for rice from daily weather. Planning estimates from FAO-56 and FAO-33 methods."
+keywords:
+  - rice
+  - agriculture
+  - evapotranspiration
+  - crop water requirement
+  - growing degree days
